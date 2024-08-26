@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#turn-indicator {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 5px;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+}
+
+.cell.empty {
+    background-color: #fff;
+    color: #000;
+}
+
+.cell.A {
+    background-color: #f0ad4e;
+}
+
+.cell.B {
+    background-color: #5bc0de;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.selected-character {
+    outline: 3px solid #5cb85c;
+    outline-offset: -4px;
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#controls button:hover {
+    background-color: #286090;
+    transform: scale(1.05);
+}
+
+#controls button:active {
+    background-color: #204d74;
+}
+
+.message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d9534f; 
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

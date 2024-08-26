@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn-Based Chess-Like Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Turn-Based Chess-Like Game</h1>
+    <div id="turn-indicator">Player A's Turn</div>
+    <div class="board" id="game-board"></div>
+    <div id="piece-placement">
+        <button onclick="placePiece('Hero1')">Place Hero1</button>
+        <button onclick="placePiece('Hero2')">Place Hero2</button>
+        <button onclick="placePiece('Pawn')">Place Pawn</button>
+    </div>    
+    <div id="controls">
+        <button id="move-left" data-move="L">L</button>
+        <button id="move-right" data-move="R">R</button>
+        <button id="move-forward" data-move="F">Fd</button>
+        <button id="move-backward" data-move="B">Bd</button>
+        <button id="move-fl" data-move="FL">FL</button>
+        <button id="move-fr" data-move="FR">FR</button>
+        <button id="move-bl" data-move="BL">BL</button>
+        <button id="move-br" data-move="BR">BR</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
